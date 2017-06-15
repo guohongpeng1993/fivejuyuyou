@@ -15,9 +15,14 @@ class AppAsset extends AssetBundle
         'css/site.css',
     ];
     public $js = [
+     'assets/149814a7/jquery.min.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
     ];
+     public $jsOptions = [
+    'position' => \yii\web\View::POS_HEAD
+    ];  //如何把资源引入的js放到head里呢？
+
 }

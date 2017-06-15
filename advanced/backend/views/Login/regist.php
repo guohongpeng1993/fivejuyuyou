@@ -14,16 +14,22 @@ use yii\widgets\ActiveForm;
 <body>
 <div class="page">
 	<div class="loginwarrp">
-		<div class="logo">管理员登陆</div>
+		<div class="logo">注册</div>
         <div class="login_form">
-	<?php $form = ActiveForm::begin(['action'=>'?r=login/index']); ?>
+	<?php $form = ActiveForm::begin(['action'=>'?r=login/regist']); ?>
 
-    <?= $form->field($model, 'uname') ?>
+    <?= $form->field($regist, 'uname') ?>
 
-    <?= $form->field($model, 'upwd') ?>
+    <?= $form->field($regist, 'upwd') ?>
+
+    <?= $form->field($regist, 'sex') ?>
+
+    <?= $form->field($regist, 'age') ?>
+    <?= $form->field($regist, 'phone') ?>
+    <?= $form->field($regist, 'email') ?>
 
     <div class="form-group">
-        <?= Html::submitButton('登录', ['class' => 'btn btn-primary']) ?>
+        <?= Html::submitButton('注册', ['class' => 'btn btn-primary']) ?>
     </div>
 
 <?php ActiveForm::end(); ?>

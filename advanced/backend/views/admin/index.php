@@ -1,4 +1,8 @@
+<?php 
+ $session=Yii::$app->session;
+$session->open();//开启session
 
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,10 +19,10 @@
 		<div class="content">
 			<div class="public-header-logo"><a href=""><i>LOGO</i><h3>拓源网络科技</h3></a></div>
 			<div class="public-header-admin fr">
-				<p class="admin-name">****管理员 您好！</p>
+				<p class="admin-name"><?php echo "<font color='red' size='6'>".$session->get('user')."</font>";?>****管理员 您好！</p>
 				<div class="public-header-fun fr">
 					<a href="?r=login/index" class="public-header-man">登录</a>
-					<a href="" class="public-header-loginout">安全退出</a>	
+					<a href="?r=login/loginout" class="public-header-loginout">安全退出</a>	
 				</div>
 			</div>
 		</div>
@@ -61,6 +65,15 @@
 							<li><a href="系统管理/admin_music.html" target="content">背景音乐管理</a></li>
 							<li><a href="系统管理/admin_cardTemplate.html" target="content">名片模板管理</a></li>
 							<li><a href="系统管理/index_tj.html" target="content">首页推荐导航</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="public-ifame-item">
+					<a href="javascript:;">旅游新闻管理</a>
+					<div class="ifame-item-sub">
+						<ul>
+							<li><a href="?r=news/news_list" target="content">列表管理</a>|<a href="?r=news/news_add" target="content">添加</a></li>
+							<li><a href="?r=news/news_cate" target="content">分类管理</a></li>
 						</ul>
 					</div>
 				</li>

@@ -1,11 +1,11 @@
 <?php 
-namespace frontend\models;
+namespace backend\models;
 use yii\db\ActiveRecord;
-class Login extends ActiveRecord
+class Admin extends ActiveRecord
 {
 	public  static function tableName()
 	{
-		return 'login';
+		return 'admin';
 	}
 	public function rules()
     {
@@ -16,9 +16,8 @@ class Login extends ActiveRecord
     public function attributeLabels()
     {
     	return [
-    	'uname'=>'用户名',
-    	 'upwd'=>'密码',
-    	 'is_writer'=>'是否申请作者'
+         'uname'=>'用户名',
+         'upwd'=>'密码'
     	];
     }
 }
